@@ -1,16 +1,17 @@
-import React, {Component} from "react";
+import React from "react";
 import {createRoot} from "react-dom/client";
+import NavContainer from "./Menu/NavContainer";
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <h1>Testing React Code</h1>
-    }
+function App () {
+    return (
+        <div>
+            <NavContainer />
+        </div>
+    );
 }
 
 const appDiv = document.getElementById("app");
 const appRoot = createRoot(appDiv)
 appRoot.render(<App />);
+
+export default App;
